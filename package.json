@@ -21,7 +21,7 @@
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
     "typings": "^0.6.8",
-    "typescript": "^1.8.0"
+    "typescript": "^2.0.3"
   },
   "devDependencies": {
     "concurrently": "^2.0.0"

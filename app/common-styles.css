@@ -1,0 +1,69 @@
+.grain{
+    background-color: #fff5ba !important;
+}
+.grain-input-addon {
+    background-color: inherit;
+}
+.hops{
+    background-color: #cef02f !important;
+}
+.yeast{
+    background-color: #ffccf9 !important;
+}
+.spices{
+    background-color: #ffabab !important;
+}
+.tab-search {
+    padding: 0px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 5px #a2a2a2;
+}
+.tab-input {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+.tab-glyph {
+    top: 0px;
+    left: 1px;
+}
+.tile.grain.row, .tile.hops.row {
+    margin: 10px 0 0 0;
+    padding: 0px;
+}
+.button-div{
+    padding: 13px;
+}
+.ingredient-button-div {
+    padding: 5px;
+}
+.ingredient-button {
+    padding: 1px;
+}
+.ingredient-button-glyph {
+    top: 0px;
+}
+.input-ingredient {
+    width: 70px !important;
+}
+.recipe-button {
+    padding: 6px;
+    font-size: 20px;
+}
+.beer-image{
+    width: 148px;
+}
+.scrollable {
+    max-height: 320px;
+    overflow-y: scroll;
+    display: inline-block;
+    width: 100%;
+    padding: 3px 13px;
+}
+.large-symbol {
+    font-size: 20px;
+    font-weight: 300;
+}
+.light-symbol {
+    font-weight: 300;
+}

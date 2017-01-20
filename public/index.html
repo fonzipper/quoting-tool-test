@@ -1,0 +1,69 @@
+<html>
+<head>
+  <base href="/">
+  <title>Hopheadz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-select.min.css">
+
+  <!-- 1. Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="es6-shim/es6-shim.min.js"></script>
+  <script src="systemjs/dist/system-polyfills.js"></script>
+
+  <script src="angular2/bundles/angular2-polyfills.js"></script>
+  <script src="systemjs/dist/system.src.js"></script>
+  <script src="angular2/router.js"></script>
+
+  <style>
+    body {
+      padding-top: 50px;
+      /*background-color: #401E03;*/
+      background-color: #f6f6f6;
+    }
+  </style>
+
+  <!-- 2. Configure SystemJS -->
+  <script>
+    System.config({
+      defaultJSExtensions: true,
+      packages: {
+        app: {
+          format: 'register',
+          defaultExtension: 'js'
+        },
+        jquery: {
+          map: 'public/css/jquery.js',
+          type: 'cjs',
+          defaultExtension: 'js'
+        }
+      }
+    });
+    System.import('main')
+            .then(null, console.error.bind(console));
+  </script>
+
+</head>
+
+<!-- 3. Display the application -->
+<body>
+<my-app id="myApp">Loading...</my-app>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script type="text/javascript">
+  function renderSelect() {
+    $('.selectpicker').selectpicker('render');
+  }
+  function startBrew() {
+    $('.row').removeClass('hidden');
+    $('.jumbotron').addClass('hidden');
+    $('.selectpicker').selectpicker('render');
+  }
+</script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "system",
     "rootDir": "app",
-    "outDir": "app",
+    "outDir": "index",
     "moduleResolution": "node",
     "sourceMap": false,
     "inlineSources": true,

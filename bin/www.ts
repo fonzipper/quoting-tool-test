@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-import { app } from 'index.ts';
+import { app } from '../index.ts';
 import { serverPort } from '../config';
 import * as http from 'http';
 

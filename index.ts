@@ -3,12 +3,6 @@ import { json, urlencoded } from 'body-parser';
 import * as path from 'path';
 import * as compression from 'compression';
 
-import { loginRouter } from './routes/login';
-import { protectedRouter } from './routes/protected';
-import { publicRouter } from './routes/public';
-import { feedRouter } from './routes/feed';
-import { userRouter } from "./routes/user";
-
 const app: express.Application = express();
 
 app.disable('x-powered-by');
@@ -16,13 +10,6 @@ app.disable('x-powered-by');
 app.use(json());
 app.use(compression());
 app.use(urlencoded({ extended: true }));
-
-// api routes
-// app.use('/api/secure', protectedRouter);
-// app.use('/api/login', loginRouter);
-// app.use('/api/public', publicRouter);
-// app.use('/api/feed', feedRouter);
-// app.use('/api/user', userRouter);
 
 if (app.get('env') === 'production') {
 

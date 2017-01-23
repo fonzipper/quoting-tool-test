@@ -63,6 +63,9 @@
     $('.jumbotron').addClass('hidden');
     $('.selectpicker').selectpicker('render');
   }
+  function sendBack() {
+    window.parent.recieveCallBack({name});
+  }
 </script>
 </body>
 

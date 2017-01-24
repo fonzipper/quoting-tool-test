@@ -18,7 +18,7 @@ export class AboutComponent {
         route.params.subscribe((data: Params) => {
           debugger;
           this.param = data.id;
-          this.sid = sid;
+          this.sid = data.sid;
         });
     }
 

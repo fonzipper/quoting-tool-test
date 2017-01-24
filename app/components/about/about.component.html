@@ -1,8 +1,8 @@
 <h2>Page: {{name}}, Route param: {{param}}</h2>
 
-<button (click)="testConn()">Test Connection</button>
+<button my-about (click)="testConn()">Test Connection</button>
 
 <p>Result: {{ result?.status }}</p>
 <p *ngIf="failure">Errors: {{result?.errors}}</p>
-<p *ngIf="!failure"><a href="{{result?.redirectURL}}" target="_blank">SignUp link</a> </p>
+<p *ngIf="!failure && result"><a href="{{result?.redirectURL}}" target="_blank">SignUp link</a> </p>
 

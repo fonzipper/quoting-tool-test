@@ -14,15 +14,15 @@ export class HomeComponent implements OnInit {
     sid: string;
 
     constructor(private route: ActivatedRoute) {
-        // this.sid = params.sid;
+        route.params
+          .subscribe((data: { sid?: string}) => this.sid = data.sid);
     }
 
     ngOnInit() {
         // debugger;
-        this.route.params.subscribe((params: Params) => {
-          // debugger;
-            this.sid = params['sid'];
-            console.log('params: ' + params);
-        })
+        // this.route.params.subscribe((params: Params) => {
+        //     params.params
+        //       .subscribe((data: { sid?: string}) => this.sid = data.sid);
+        // })
     }
 }

@@ -1,5 +1,8 @@
 <h2>Page: {{name}}, Route param: {{param}}</h2>
 
-<button (click)="testConnection">Test Connection</button>
+<button (click)="testConn()">Test Connection</button>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper feugiat velit in aliquet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam dictum sodales dui vehicula convallis. Donec mattis pharetra lacus feugiat ultrices. Curabitur placerat interdum ligula, quis suscipit velit iaculis at. Etiam mollis ex et cursus elementum. Suspendisse nec elit ante. Praesent pharetra pharetra tellus, rutrum lobortis odio viverra vitae.</p>
+<p>Result: {{ result?.status }}</p>
+<p *ngIf="failure">Errors: {{result?.errors}}</p>
+<p *ngIf="!failure"><a href="{{result?.redirectURL}}" target="_blank">SignUp link</a> </p>
+

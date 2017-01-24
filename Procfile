@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/tsc -w && node ./bin/www
+web: node ./bin/www

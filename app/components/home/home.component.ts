@@ -13,14 +13,13 @@ export class HomeComponent implements OnInit {
     users: {};
     sid: string;
 
-    constructor(http: Http, _route: ActivatedRoute) {
-        http.get("/users")
-            .map(data => data.json())
-            .subscribe((data) => this.users = data);
+    constructor(private route: ActivatedRoute) {
+        this.sid = params.sid;
     }
 
     ngOnInit() {
-        this._route.params.subscribe((params: Params) => {
+        debugger;
+        this.route.params.subscribe((params: Params) => {
             this.sid = params['sid'];
         })
     }

@@ -19,16 +19,13 @@ export class AboutComponent {
     }
 
     testConn(){
-        debugger;
         this.testConnection().then(result => result.subscribe(result => {
-          // debugger;
           this.result = result;
           this.failure = (result.status == 'failure');
         }))
     }
 
     testConnection() {
-      // debugger;
       var headers = new Headers();
       headers.append("Content-type", "text/json");
       headers.append("Authorization", "OAuth " + this.param);
@@ -37,6 +34,5 @@ export class AboutComponent {
       }).map((res: Response) => {
           return res.json();
       }));
-      // console.log(rr);
     }
 }

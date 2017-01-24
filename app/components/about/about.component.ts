@@ -13,9 +13,8 @@ export class AboutComponent {
     result: any;
     failure: Boolean = false;
 
-    constructor(private params: ActivatedRoute, private http: Http) {
-        params.params
-            .subscribe((data: { id?: string}) => this.param = data.id);
+    constructor(private route: ActivatedRoute, private http: Http) {
+        route.params.subscribe((data: { id?: string}) => this.param = data.id);
     }
 
     testConn(){

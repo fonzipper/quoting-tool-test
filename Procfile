@@ -1,1 +1,1 @@
-web: node ./bin/www
+web: concurrently \"tsc -w\" \"nodemon ./bin/www\"

@@ -15,7 +15,7 @@ export class AboutComponent {
     failure: Boolean = false;
 
     constructor(private route: ActivatedRoute, private http: Http) {
-        route.params.subscribe((data: Params) => {
+        route.params.subscribe((data: {id?: string, sid?: string}) => {
           debugger;
           this.param = data.id;
           this.sid = data.sid;

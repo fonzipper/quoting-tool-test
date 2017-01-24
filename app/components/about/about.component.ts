@@ -19,6 +19,7 @@ export class AboutComponent {
     }
 
     testConn(){
+        debugger;
         this.testConnection().then(result => result.subscribe(result => {
           // debugger;
           this.result = result;

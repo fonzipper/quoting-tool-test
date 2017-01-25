@@ -4,6 +4,9 @@
 <button (click)="testConn()">Test Connection</button>
 
 <p>Result: {{ result?.status }}</p>
-<p *ngIf="failure">Errors: {{result?.errors}}</p>
+<p *ngIf="failure">Errors:</p>
+<ul *ngFor="let error of result?.errors">
+  <li>{{ error }}</li>
+</ul>
 <p *ngIf="!failure && result"><a href="{{result?.redirectURL}}" target="_blank">SignUp link</a> </p>
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Http, Headers, Response} from '@angular/http'
 
 @Component({
@@ -16,7 +16,6 @@ export class AboutComponent {
 
     constructor(private route: ActivatedRoute, private http: Http) {
         route.params.subscribe((data: {id?: string, sid?: string}) => {
-          debugger;
           this.param = data.id;
           this.sid = data.sid;
         });

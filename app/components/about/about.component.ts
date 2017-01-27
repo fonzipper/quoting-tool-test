@@ -32,9 +32,10 @@ export class AboutComponent {
       var headers = new Headers();
       headers.append("Content-type", "text/json");
       headers.append("Authorization", "OAuth " + this.sid);
-      return Promise.resolve(this.http.get("https://rc--box22.cs15.my.salesforce.com/services/apexrest/RelaywareRestAPI?id="+this.param, {
+      return Promise.resolve(
+        this.http.get("https://rc--partialqa.cs30.my.salesforce.com/services/apexrest/RelaywareRestAPI?id="+this.param, {
           headers: headers
-      }).map((res: Response) => {
+        }).map((res: Response) => {
           return res.json();
       }));
     }
